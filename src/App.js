@@ -7,6 +7,7 @@ import Notification from './containers/Notification';
 import Home from './containers/Home';
 import Info from './containers/Info';
 import Settings from './containers/Settings';
+import Dashbords from './containers/Dashbords'
 
 // コンポーネント読み込み
 import WrapMainContent from './components/WrapMainContent'
@@ -36,6 +37,7 @@ class App extends Component {
             <Route exact path="/" component={WrapMainContent(Home)} />
             <Route exact path="/info" component={WrapMainContent(Info)}/>
             <Route exact path="/settings" component={WrapMainContent(Settings)}/>
+            <Route exact path="/dashbords" component={WrapMainContent(Dashbords)}/>
             <Route component={WrapMainContent(NotFound)}/>
           </Switch>
         </ResponsiveDrawer>

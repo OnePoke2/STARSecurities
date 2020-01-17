@@ -32,15 +32,15 @@ class Info extends React.Component {
 
     return (
       <div>
-        <h2>Animelについて</h2>
+        <h2>STAR証券について</h2>
         <div className={classes.textLeft}>
         
           <Paper className={classes.root} elevation={1}>
             <Typography variant="headline" component="h3">
-              Animelとは
+              STAR証券とは
             </Typography>
             <Typography component="p">
-              今期のアニメから過去のアニメまで、情報を一覧表示するアプリ。各クールのアニメのタイトル・サブタイトル・ハッシュタグ・Twitter・公式サイトを一覧に表示します。2014年以降のアニメに対応しております。
+              今期の証券から過去の証券まで、情報を一覧表示するアプリ。各四半期の証券の銘柄名・ハッシュタグ・Twitter・公式サイトを一覧に表示します。2014年以降の証券に対応しております。
             </Typography>
           </Paper>
           
@@ -65,10 +65,10 @@ class Info extends React.Component {
               本アプリの目的
             </Typography>
             <Typography component="p" className={classes.paragraph}>
-              このアプリは、SPAアプリ作成入門者が、React・Redux・Material-UI等を使ってアプリを作るためのHowTo用途で作成しています。
+              マーケット情報、株価ウォッチ、チャート分析、お取引、資産情報の確認まで多彩な機能を無料でご利用いただけます。
             </Typography>
             <Typography component="p" className={classes.paragraph}>
-              コードも公開しているのでこんな感じのアプリを作りたい方は下記記事などを参考にしてみて下さい。ただ、私自身も初学者のためあくまで参考程度にご利用下さい。（ご指摘・質問など大歓迎）
+              ログインすることでお取引をはじめ、リアルタイム株価情報やニュース詳細、各種ランキングなど、すべての機能を制約なくご利用いただけます。野村證券に口座を開設することで、ログインが可能です。
             </Typography>
           </Paper>
           <Paper className={classes.root} elevation={1}>
@@ -77,7 +77,7 @@ class Info extends React.Component {
             </Typography>
             <Typography component="p" className={classes.paragraph}>
               ソース：
-              <a href="https://github.com/ykawase1011/animel" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/ykawase1011/starsecurities" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </Typography>

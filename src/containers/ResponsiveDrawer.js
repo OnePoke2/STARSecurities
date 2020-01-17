@@ -17,6 +17,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
 import ShareIcon from '@material-ui/icons/Share';
+import PieChartIcon from '@material-ui/icons/PieChart'
 
 
 // Route関連
@@ -121,7 +122,7 @@ class ResponsiveDrawer extends React.Component {
             to="/info"
             onClick={this.closeDrawerNav}
             icon={<InfoIcon />}
-            text="Animelとは"
+            text="Star証券とは"
           />
         </List>
         <Divider />
@@ -131,6 +132,12 @@ class ResponsiveDrawer extends React.Component {
             onClick={this.closeDrawerNav}
             icon={<HomeIcon />}
             text="トップページ"
+          />
+          <ResponsiveDrawerListItem
+            to="/dashbords"
+            onClick={this.closeDrawerNav}
+            icon={<PieChartIcon />}
+            text="資産"
           />
           <ResponsiveDrawerListItem
             to="/settings"
@@ -156,7 +163,7 @@ class ResponsiveDrawer extends React.Component {
             </IconButton>
             <Link to="/">
               <Typography variant="title" color="inherit" noWrap>
-                <img src="/images/logo_animel_white.png" alt="logo_animel_white" className={classes.headerLogo}/>
+                <img src="/images/STAR証券_yoko_transparent_w.png" alt="logo_starsecurities_white" className={classes.headerLogo}/>
               </Typography>
             </Link>
             <IconButton

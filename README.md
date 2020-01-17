@@ -1,13 +1,13 @@
-# Animel is Responsive SPA sample
-Animel is using React, Redux, Material-UI, etc...
+# StarSecurities is Responsive SPA sample
+StarSecurities is using React, Redux, Material-UI, etc...
 
 Please feel free to use it. DON'T forget to replace 'My profile', 'Google Analystics', 'Adsense' code.
 If you have any idea or betterment, please tell me([@y_kawase](https://twitter.com/y_kawase)).
 
 ```bash
-# Create Sample by animel
-git clone https://github.com/ykawase1011/animel.git
-cd animel
+# Create Sample by starsecurities
+git clone https://github.com/ykawase1011/starsecurities.git
+cd starsecurities
 npm install
 npm start
 
@@ -16,7 +16,7 @@ npm run build
 ```
 
 スマホ・PCに対応した、シングルページアプリケーション（SPA）です。
-ボタンを押下すると[ShangriLa Anime API](https://qiita.com/AKB428/items/64938febfd4dcf6ea698)を叩いて今期のアニメ情報を取得してきて表示するというシンプルなアプリ。昨今はモバイルファーストの世の中なのでモバイルを意識しつつもPCで表示できるようにレスポンシブなアプリにしています。
+ボタンを押下すると[ShangriLa Anime API](https://qiita.com/AKB428/items/64938febfd4dcf6ea698)を叩いて今期の証券情報を取得してきて表示するというシンプルなアプリ。昨今はモバイルファーストの世の中なのでモバイルを意識しつつもPCで表示できるようにレスポンシブなアプリにしています。
 
 作り方などは[こちら](https://blog.f-arts.work/archives/791)にまとめておりますのでご参考下さい。
 

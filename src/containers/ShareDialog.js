@@ -63,8 +63,8 @@ class ShareDialog extends React.Component {
     const { classes } = this.props;
     
     // シェアボタン用
-    const shareUrl = "https://animel.f-arts.work";
-    const title = "Animel | アニメなにみる？";
+    const shareUrl = "https://starsecurities.f-arts.work";
+    const title = "StarSecurities | STAR証券";
     
     return (
       <Dialog
@@ -74,7 +74,7 @@ class ShareDialog extends React.Component {
         aria-describedby="alert-dialog-description"
         className={classes.root}
       >
-        <DialogTitle>Animelをシェアする</DialogTitle>
+        <DialogTitle>StarSecuritiesをシェアする</DialogTitle>
         <Divider/>
         <DialogContent className={classes.snsShareButtonArea}>
           <FacebookShareButton

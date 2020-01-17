@@ -23,7 +23,7 @@ import AnimeList from '../containers/AnimeList';
 const styles = theme => ({
   titleImage: {
     width: '100%',
-    maxWidth: 700,
+    maxWidth: 300,
   },
   
   button: {
@@ -80,10 +80,18 @@ class Home extends React.Component {
     for (var y = current_year; y >= 2014; y--) {
       years.push(<MenuItem key={y} value={y}>{y}年</MenuItem>);
     }
+    // 銘柄コード入力
+    const codes = [];
+    const codes_detail = ['1000~', '2000~', '3000~', '4000~', '5000~', '6000~', '7000~', '8000~', '9000~'];
+    for (var c = 0; c < 9; c++) {
+      codes.push(<MenuItem key={c*1000} value={c+1}>{codes_detail[c]}</MenuItem>);
+    }
+
+
     // Cours入力
     const cours = [];
-    const cours_detail = ['1期（冬期）', '2期（春期）', '3期（夏期）', '4期（秋期）'];
-    const cours_detail_month = ['冬：1～3月', '春：4～6月', '夏：7～9月', '秋：10～12月'];
+    const cours_detail = ['金融', '保険', '小売', 'サービス'];
+    const cours_detail_month = ['金融業界', '保険業界', '小売業界', 'サービス業界'];
     for (var i = 0; i < cours_detail.length; i++) {
       cours.push(<MenuItem key={i+1} value={i+1}>{cours_detail[i]}</MenuItem>);
     }
@@ -91,9 +99,9 @@ class Home extends React.Component {
 
     return (
       <div>
-        <img src="/images/title.png" alt="title" className={classes.titleImage}/>
+        <img src="/images/STAR証券_transparent.png" alt="STAR証券" className={classes.titleImage}/>
         <form autoComplete="off">
-          <FormControl className={classes.formControl}>
+          {/* <FormControl className={classes.formControl}>
             <InputLabel shrink htmlFor="year-helper">西暦</InputLabel>
             <Select
               value={this.state.year}
@@ -105,9 +113,24 @@ class Home extends React.Component {
             >
             {years}
             </Select>
-          </FormControl>
+          </FormControl> */}
+
           <FormControl className={classes.formControl}>
-            <InputLabel shrink htmlFor="cour-helper">クール</InputLabel>
+            <InputLabel shrink htmlFor="code-helper">銘柄コード</InputLabel>
+            <Select
+              value={this.state.code}
+              onChange={this.handleChange}
+              inputProps={{
+                name: 'code',
+                id: 'code-helper',
+              }}
+            >
+            {codes}
+            </Select>
+          </FormControl>
+
+          <FormControl className={classes.formControl}>
+            <InputLabel shrink htmlFor="cour-helper">業界</InputLabel>
             <Select
               value={this.state.cour}
               onChange={this.handleChange}
@@ -126,7 +149,8 @@ class Home extends React.Component {
           className={classes.button}
           onClick={() => actions.getAnimes(this.state.year, this.state.cour)}
         >
-          {this.state.year}年（{cours_detail_month[this.state.cour-1]}）<br/>のアニメを検索
+          {/* {this.state.year}年（{cours_detail_month[this.state.cour-1]}）<br/>の証券を検索 */}
+          【{cours_detail_month[this.state.cour-1]}】の証券を検索
           <Search className={classes.rightIcon}/>
         </Button>
         <AnimeList/>

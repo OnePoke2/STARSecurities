@@ -72,14 +72,13 @@ class Settings extends React.Component {
     return (
       <div>
         <h2>設定</h2>
-        <p>のようなもの</p>
         <div className={classes.root}>
           <List>
             <ListItem>
               <ListItemIcon>
                 <NotificationsActiveIcon/>
               </ListItemIcon>
-              <ListItemText primary="Notificationで出すぞ" />
+              <ListItemText primary="Notification" />
               <ListItemSecondaryAction>
                 <Switch
                   onChange={this.handleToggle('notification')}
@@ -91,7 +90,7 @@ class Settings extends React.Component {
               <ListItemIcon>
                 {yarukiSwitchIcon}
               </ListItemIcon>
-              <ListItemText primary="ただのやる気スイッチ" />
+              <ListItemText primary="相場" />
               <ListItemSecondaryAction>
                 <Switch
                   onChange={this.handleToggle('yaruki')}

@@ -8,6 +8,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 // Material-UIアイコン取得
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
+import PieChartIcon from '@material-ui/icons/PieChart'
 
 // Route関連
 import { Link, withRouter } from 'react-router-dom';
@@ -40,7 +41,8 @@ const styles = theme => ({
 class RouteRelatedBottomNavigation extends React.Component {
   buttons_info = [
     { label: 'トップページ', icon: <HomeIcon />, link_to: '/'},
-    { label: 'Animelとは', icon: <InfoIcon />, link_to: '/info'},
+    { label: '資産', icon: <PieChartIcon />, link_to: '/dashbords'},
+    { label: 'STAR証券とは', icon: <InfoIcon />, link_to: '/info'},
   ];
   
   buttons = this.buttons_info.map( (button_info, index) => {
